@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
     <head> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">        
         <title> Wang Lab2: Meeting Minutes </title>
         <meta name = "author" content = "Xianglong Wang">
         <link rel = "icon" href = "favicon.ico">
         <style>
-            body{
+            /*added media query*/
+            @media only screen and (max-width: 600px){
+                p{
+                    background-color: salmon;
+                }
+            
+            }
+
+            /*Class selecters*/
+            .box { /*add box mode*/
+                    
+                    margin-top: 2px;
+                    margin-bottom: 2px;
+                    margin: 2px 2px 2px 2px; /*shorthand*/
+
+                    padding-top: 5px;
+                    padding-bottom:5px ;
+                    padding: 5px 10px 5px 10px;/*shorthand*/
+
+                    border-color:rgb(18, 108, 150); 
+                    border-style: ridge;
+                    border-width: 30px;
+                    border-radius: 0px;
+                    border: 30px ridge rgb(18, 108, 150) /*shorthand*/
+            }
+
+            /*ID selecters*/
+            #highlight1{
+                text-decoration: underline;
+            }
+
+            /*Universal selecters*/
+            *{
                 background-color:rgb(194, 235, 232); /*new background color*/
             }
 
+            /*Element Selectors*/
+            /*already contained*/
+
+            /*Attribute Selector*/
+            a[target]{
+                background-color: salmon;
+            }
+
+            /*Pseudo-class Selecter*/
             a:hover{ /*added hover*/
                 background-color:rgb(238, 67, 232);
             }
@@ -17,9 +61,39 @@
             {
 	            background-color:rgb(13, 201, 82);
             }
-    
+
+            /*Selector List*/
+            h1,h2{
+                text-align:center;/* added text align*/
+            }
+
+            /*Combinators*/
+
+        
+            /*Descendant Combinators*/
+            ol li{
+                color: slateblue;
+                font-size: 25px;
+            }
+
+            /*Child Combinator*/
+
+            ul > li {
+                color: rgb(86, 74, 167);
+                font-size: 25px;
+            }
+
+            /*Adjacent sibling combinator*/
+            h2+h3{
+                text-align:center;/* added text align*/
+            }
+
+            /*Combining Two Selectors */
+            div ~ p {
+                color: slategray;
+            }
         </style>
-         
+          
     </head>
 
     
@@ -37,6 +111,7 @@
                 font-size: 22px;
                 line-height: 1.5em;/*uniqe unit em*/
                 color: rgb(7, 95, 136);/*new paragraph color*/
+                font-family: 'Montserrat', sans-serif;/*use external font*/
             }
             
             span {
@@ -54,6 +129,36 @@
 
 
             }
+            .flexoutside{
+                    display: flex;
+                    flex-flow: column wrap;
+                    width:1200px;
+                    height: 200px;
+                    background-color: rgb(165, 118, 118);
+                }
+
+                .flexinside{
+                    background-color:rgb(70, 137, 161);
+                    width: 300px;
+                    margin: 15px;
+                    text-align:center;
+                    font-size:  0.4in;/*unique absolute unit in*/
+                }
+
+                .gridoutside{
+                    display: inline-grid;
+                    grid-template-columns:  100% ;
+                    grid-template-rows: 100px;
+                   
+                        
+                }
+
+                .gridinside1{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, 1000px);
+                }
+
+            
         </style>
 
         <header>
@@ -90,21 +195,9 @@
                     
                 }
 
-                .box { /*add box mode*/
-                    
-                    margin-top: 2px;
-                    margin-bottom: 2px;
-                    margin: 2px 2px 2px 2px; /*shorthand*/
-
-                    padding-top: 5px;
-                    padding-bottom:5px ;
-                    padding: 5px 10px 5px 10px;/*shorthand*/
-
-                    border-color:rgb(18, 108, 150); 
-                    border-style: ridge;
-                    border-width: 30px;
-                    border-radius: 0px;
-                    border: 30px ridge rgb(18, 108, 150) /*shorthand*/
+                div {
+                    display: grid;/*use grid*/
+                    grid-template-rows: 100px 50px 50px;
                 }
 
             </style>
@@ -113,6 +206,7 @@
                 <h1>First Meeting Minutes</h1>
                 <h2>Hold By Xianglong Wang</h2> <h2>10/2 2021</h2>
             </div>
+           
 
             <nav>
             <a href="https://xiw019.com"> Xianglong BLog</a>
@@ -125,12 +219,11 @@
             
 
             <section>
-                <h3>Attendance:</h3>
-                <ul>
-                    <li>Xianglong Wang</li>
-                    <li>Friend A</li>
-                    <li>Friend B</li>
-                    <li>Friend</li>
+                <h3 id = "highlight1" >Attendance:</h3>
+                <ul class = 'flexoutside'>
+                    <li class = 'flexinside'>Xianglong Wang</li>
+                    <li class = 'flexinside'>Pikachu</li>
+                    <li class = 'flexinside'>Charmander</li>
                 </ul>
                 <p><b>Please focus!!</b></p>
                 <img src="cryingfox.GIF" alt = "cryingfox" width = "80" height="80">
@@ -139,6 +232,7 @@
             <section>
                 <h3><span>Agenda of what the meeting will cover:</span></h3>
                     <p>This meeting will cover the <b>recommender-system</b> deep learing model we talked last time</p>
+                    <p>for course information, please check Canvas</p> <a href="http://canvas.ucsd.edu" target="_blank">canvas.ucsd.edu</a>
                 <hr>   
 
                 <h3><span>unfinished stuffs from last meeting</span></h3>
@@ -154,14 +248,21 @@
                 <h3><span>new stuff need to be talked about</span></h3>
                     <p>loss function for <strong>content-based-filtering</strong> model</p>
                 <hr> 
+                
 
                 <h3><span>miscellaneous comments/questions bring up</span></h3>
-                <ol>
+                <div class='gridoutside'>
+                <ol class='gridinside1' >
                     <li>How to <i>optimize</i> the loss function</li>
                     <li>Revised due date</li>
                     <li> <em>Schedule</em> for next meeting</li>
                 </ol>
+                </div>
+
                 <hr> 
+
+
+
             </section>
 
             <section>
