@@ -1,6 +1,6 @@
 ## Lab3 Standup 1  
 
-###Xianglong Wang
+### Xianglong Wang
 
 Date(mm/dd/y): 08/10 2021  
 
