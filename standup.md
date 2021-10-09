@@ -2,11 +2,18 @@
 
 ### Xianglong Wang
 
-Date(mm/dd/y): 08/10 2021  
+### Date(mm/dd/y):  
+08/10 2021  
 
-Briefs: Use CSS to optimize the webpage from Lab2
+### Last Update:  
+Using HTML accomplish the website
 
-Details: Formatting and Coloring the text, parapraphs and lists. 
+### Briefs:   
+Use CSS to optimize the webpage from Lab2
 
- 
+### Details: 
+Formatting and Coloring the text, parapraphs and lists. 
+
+### Things to be done:  
+Cotinue Optimizing the formate
 
